@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    width: 500px;
+    background-color: #1c1c1c;
+
+    padding: 30px;
+    border-radius: 15px;
+box-shadow: 0 0 10px #4caf50,
+            0 0 30px #4caf50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Input */
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+
+    padding: 12px 15px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+#addBtn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #4caf50;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#addBtn:hover {
+    background-color: #45a049;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.filter {
+    padding: 8px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    cursor: pointer;
+}
+
+.filter:hover,
+.filter.active {
+    background-color: #4caf50;
+}
+
+/* Task list */
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #292929;
+
+    padding: 12px 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-text {
+    font-size: 16px;
+}
+
+/* Completed task */
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Delete button */
+
+.delete-btn {
+    border: none;
+
+    background-color: #e53935;
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+}
+
+/* Bottom */
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+
+    color: #aaa;
+}
+
+#clearBtn {
+    background: none;
+    border: none;
+
+    color: #4caf50;
+
+    cursor: pointer;
+}
+
+#clearBtn:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .todo-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
